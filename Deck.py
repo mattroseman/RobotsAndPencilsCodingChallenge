@@ -66,6 +66,9 @@ class Deck:
         Card(Rank.king, Suit.spades)]
 
     def __init__(self, cards=[]):
+        """
+        @param cards: a list of Card objects representing the initial cards in the deck, and the initial ordering
+        """
         if not isinstance(cards, list):
             raise TypeError("cards must be a list")
         if not all(isinstance(card, Card) for card in cards):

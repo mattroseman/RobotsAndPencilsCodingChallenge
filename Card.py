@@ -8,6 +8,10 @@ class Card:
     """
 
     def __init__(self, rank, suit):
+        """
+        @param rank: a Rank enum representing the rank of this card
+        @param suit: a Suit enum representing the suit of this card
+        """
         if not isinstance(rank, Rank):
             raise TypeError("Card rank must be of type Rank")
 
