@@ -2,6 +2,9 @@ from enum import Enum
 
 
 class Rank(Enum):
+    """
+    Rank represents the 13 ranks a standard playing card can have
+    """
     ace = 1
     two = 2
     three = 3

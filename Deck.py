@@ -6,7 +6,11 @@ import time
 
 
 class Deck:
+    """
+    Deck represents a group of cards
+    """
 
+    # standard_deck is the standard 52 card deck that playing cards come in
     standard_deck = [
         Card(Rank.ace, Suit.clubs),
         Card(Rank.two, Suit.clubs),

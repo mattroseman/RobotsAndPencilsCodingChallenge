@@ -3,6 +3,9 @@ from Suit import Suit
 
 
 class Card:
+    """
+    Card represents a standard playing card that contains a rank and a suit
+    """
 
     def __init__(self, rank, suit):
         if not isinstance(rank, Rank):
