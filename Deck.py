@@ -80,6 +80,14 @@ class Deck:
         """
         shuffle randomly rearranges the order of all the cards in this deck.
         The algorithm used is the Fisher-Yates shuffle, which is done in place in O(n) time
+
+        Programmers Note:
+        I debated between emulating how a human would shuffle a deck (where it isn't truly random) or to just make each
+        possible deck outcome equally likely, and completely independent of the previous deck state.
+        I decided that without knowing how the deck was to be used, the completely random method was best.
+        This may change however if, for instance, you want to ensure that after shuffling the state of the deck is
+        sufficiently different than the previous state, and that it is unlikely or impossible to get a very similar deck
+        state after shuffling.
         """
         random.seed(time.time())
 
