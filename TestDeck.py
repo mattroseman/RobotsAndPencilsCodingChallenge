@@ -33,6 +33,13 @@ class TestDeck(unittest.TestCase):
 
         self.assertEqual(deck.deal_card(), Card(Rank.ace, Suit.clubs))
 
+    def test_empty_deck_deal_card(self):
+        deck = Deck([])
+        self.assertEqual(deck.deal_card(), None)
+
+        deck = Deck()
+        self.assertEqual(deck.deal_card(), None)
+
     def test_shuffle(self):
         # There is always a chance that shuffling the deck will result in the same configuration,
         # so I have tested this shuffling function manually (besided checking that it doesn't

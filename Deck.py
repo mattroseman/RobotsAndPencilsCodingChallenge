@@ -87,8 +87,10 @@ class Deck:
     def deal_card(self):
         """
         deal_card will remove the first card of the deck and return it
-        @return: a Card type that was the first card of the deck
+        @return: a Card type that was the first card of the deck, or None if the deck is empty
         """
+        if len(self._deck) == 0:
+            return None
         card = self._deck[0]
         self._deck = self._deck[1:]
         return card
